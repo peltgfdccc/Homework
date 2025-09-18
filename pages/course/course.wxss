@@ -1,0 +1,4 @@
+/* pages/course/course.wxss */
+.imgBox{
+	width: 100%;
+}

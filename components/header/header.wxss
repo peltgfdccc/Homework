@@ -1,0 +1,9 @@
+/* components/header/header.wxss */
+.header{
+	height: 10vh;
+	background-color: orange;
+	display: block;
+	width: 100%;
+	text-align: center;
+	line-height: 14vh;
+}

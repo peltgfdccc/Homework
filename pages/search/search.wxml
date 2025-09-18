@@ -1,0 +1,12 @@
+<!--pages/search/search.wxml-->
+<header-nav innerTitle="搜索"></header-nav>
+<view class="searchBox">
+		<input type="text" placeholder="搜索" bindconfirm="valueFn"/>
+</view>
+
+<view class="searchRe">
+		<view class="se-box" wx:for="{{searchDataList}}" wx:key="index">
+				<image src="{{item.coverFileUrl}}" mode=""/>
+				<text class="title">{{item.courseSubtitle}}</text>
+		</view>
+</view>

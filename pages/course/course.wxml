@@ -1,0 +1,10 @@
+<!--pages/course/course.wxml-->
+<header-nav innerTitle="课程"></header-nav>
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <block wx:for="{{subjectCourseData}}" wx:key="index">
+		<van-tab title="{{item.subjectTitle}}">
+				<image class="imgBox" src="{{item.bannerFileUrl}}" mode=""/>
+				<text>{{item.subjectDesc}}</text>
+		</van-tab>
+	</block>
+</van-tabs>
