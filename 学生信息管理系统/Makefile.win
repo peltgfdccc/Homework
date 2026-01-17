@@ -1,0 +1,64 @@
+# Project: 学生信息管理系统
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o add.o display_all.o display_id.o modify.o del.o find.o compute.o sort.o save_txt.o load_txt.o save_bin.o load_bin.o
+LINKOBJ  = main.o add.o display_all.o display_id.o modify.o del.o find.o compute.o sort.o save_txt.o load_txt.o save_bin.o load_bin.o
+LIBS     = -L"D:/DEV C++/Dev-Cpp/MinGW64/lib" -L"D:/DEV C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/DEV C++/Dev-Cpp/MinGW64/include" -I"D:/DEV C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/DEV C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/DEV C++/Dev-Cpp/MinGW64/include" -I"D:/DEV C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/DEV C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/DEV C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 学生信息管理系统.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+add.o: add.c
+	$(CC) -c add.c -o add.o $(CFLAGS)
+
+display_all.o: display_all.c
+	$(CC) -c display_all.c -o display_all.o $(CFLAGS)
+
+display_id.o: display_id.c
+	$(CC) -c display_id.c -o display_id.o $(CFLAGS)
+
+modify.o: modify.c
+	$(CC) -c modify.c -o modify.o $(CFLAGS)
+
+del.o: del.c
+	$(CC) -c del.c -o del.o $(CFLAGS)
+
+find.o: find.c
+	$(CC) -c find.c -o find.o $(CFLAGS)
+
+compute.o: compute.c
+	$(CC) -c compute.c -o compute.o $(CFLAGS)
+
+sort.o: sort.c
+	$(CC) -c sort.c -o sort.o $(CFLAGS)
+
+save_txt.o: save_txt.c
+	$(CC) -c save_txt.c -o save_txt.o $(CFLAGS)
+
+load_txt.o: load_txt.c
+	$(CC) -c load_txt.c -o load_txt.o $(CFLAGS)
+
+save_bin.o: save_bin.c
+	$(CC) -c save_bin.c -o save_bin.o $(CFLAGS)
+
+load_bin.o: load_bin.c
+	$(CC) -c load_bin.c -o load_bin.o $(CFLAGS)
