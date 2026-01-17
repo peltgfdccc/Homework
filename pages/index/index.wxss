@@ -1,0 +1,78 @@
+/**index.wxss**/
+.searchBox{
+	height: 60rpx;
+	margin-top: 10rpx;
+	margin-bottom: 10rpx;
+	display: flex;
+	justify-content: center;
+}
+.searchBox input{
+	background-color: rgba(50, 50, 50, 0.2);
+	height: 100%;
+	width: 96%;
+	border-radius: 60rpx;
+	text-align: center;
+}
+.swiperBox{
+	height: 300rpx;
+}
+.swiperBox swiper{
+	height: 100%;
+}
+.swiperBox image{
+	width: 100%;
+	height: 100%;
+}
+.courseTitle{
+	padding: 10rpx 10rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.courseTitle .free{
+	font-size: 34rpx;
+	color: #333;
+	font-weight: bold;
+}
+.courseList .more{
+	font-size: 26rpx;
+	color: #999;
+}
+.courseConcent{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.courseConcent .box{
+	width: 48%;
+	height: 170px;
+	border: 1px solid red;
+	margin-bottom: 8rpx;
+}
+.boxImg{
+	height: 120px;
+}
+.boxImg image{
+	height: 100%;
+	width: 100%;
+}
+.boxTitle{
+	padding: 8rpx 0;
+	font-size: 28rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.boxCon{
+	display: flex;
+	justify-content: space-between;
+	font-size: 23rpx;
+}
+.freeText{
+	color: green;
+}
+.discountText{
+	background-color: orange;
+	border: 1px solid #ff0000;
+	color: #333;
+	padding: 5rpx;
+}

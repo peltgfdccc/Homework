@@ -1,0 +1,3 @@
+<!--pages/person/person.wxml-->
+<header-nav innerTitle="个人中心"></header-nav>
+<text>pages/person/person.wxml</text>

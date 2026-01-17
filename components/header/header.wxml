@@ -1,0 +1,2 @@
+<!--components/header/header.wxml-->
+<header-nav class="header">{{innerTitle}}</header-nav>

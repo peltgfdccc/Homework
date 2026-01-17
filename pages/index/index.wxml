@@ -1,0 +1,87 @@
+<!--index.wxml-->
+<header-nav innerTitle="首页"></header-nav>
+<view class="searchBox">
+		<input type="text" placeholder="搜索" bind:tap="jumpSearchPage"/>
+</view>
+
+<view class="swiperBox">
+	<swiper autoplay="true" indicator-dots="true" indicator-color="#333" indicator-active-color="orange" interval="1500">
+		<swiper-item wx:for="{{swiperDataArr}}" wx:if="index">
+				<image src="{{item.imgUrl}}" mode=""/>
+		</swiper-item>
+	</swiper>
+</view>
+
+<view>
+		<!-- 免费 -->
+		<view class="courseList">
+			<view class="courseTitle">
+				<text class="free">免费课程</text>
+				<text class="more">更多>></text>
+		</view>
+		<view class="courseConcent">
+			<block wx:for="{{indexCourseFreeData}}" wx:key="index">
+				<view class="box">
+					<view class="boxImg">
+						<image src="{{item.coverFileUrl}}" mode=""/>
+					</view>
+				<view class="boxTitle">{{item.courseTitle}}</view>
+				<view class="boxCon">
+						<text class="freeText" wx:if="{{item.isFree == '1'}}">免费</text>
+						<text class="discountText" wx:elif="{{item.isDiscount == '1'&&item.isFree == '0'}}">限时折扣</text>
+						<text class="freeText" wx:else=""></text>
+						<text class="count">{{item.learningNum}}</text>
+				</view>
+			</view>
+			</block>
+		</view>
+		</view>		
+		
+		<!-- 限时 -->
+		<view class="courseList">
+			<view class="courseTitle">
+				<text class="free">限时折扣</text>
+				<text class="more">更多>></text>
+		</view>
+		<view class="courseConcent">
+			<block wx:for="{{indexCourseDiscountData}}" wx:key="index">
+				<view class="box">
+					<view class="boxImg">
+						<image src="{{item.coverFileUrl}}" mode=""/>
+					</view>
+				<view class="boxTitle">{{item.courseTitle}}</view>
+				<view class="boxCon">
+						<text class="freeText" wx:if="{{item.isFree == '1'}}">免费</text>
+						<text class="discountText" wx:elif="{{item.isDiscount == '1'&&item.isFree == '0'}}">限时折扣</text>
+						<text class="freeText" wx:else=""></text>
+						<text class="count">{{item.learningNum}}</text>
+				</view>
+			</view>
+			</block>
+		</view>
+		</view>
+		<!-- 精品 -->
+		<view class="courseList">
+			<view class="courseTitle">
+				<text class="free">精品课程</text>
+				<text class="more">更多>></text>
+		</view>
+		<view class="courseConcent">
+			<block wx:for="{{indexCourseBoutiqueData}}" wx:key="index">
+				<view class="box">
+					<view class="boxImg">
+						<image src="{{item.coverFileUrl}}" mode=""/>
+					</view>
+				<view class="boxTitle">{{item.courseTitle}}</view>
+				<view class="boxCon">
+						<text class="freeText" wx:if="{{item.isFree == '1'}}">免费</text>
+						<text class="freeText" wx:elif="{{item.isDiscount == '1'&&item.isFree == '0'}}">限时折扣</text>
+						<text class="freeText" wx:else=""></text>
+						<text class="count">{{item.learningNum}}</text>
+				</view>
+			</view>
+			</block>
+		</view>
+		</view>
+</view>
+

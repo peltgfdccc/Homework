@@ -1,0 +1,22 @@
+/* pages/search/search.wxss */
+.searchBox input{
+		background-color: blanchedalmond;
+}
+.searchRe{
+	border-top: 4px solid pink;
+}
+
+.se-box{
+	display: flex;
+	align-items: center;
+	border: 1px solid #ccc;
+}
+.se-box image{
+	width: 160px;
+	height: 100px;
+}
+.title{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
